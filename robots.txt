@@ -1,1 +1,1 @@
-Sitemap: https://waseemwaheed.github.io/DataInterrogator/sitemap.xml
+Sitemap: https://waseemwaheed.github.io/sitemap.xml
