@@ -13,7 +13,7 @@ My main skills are:
   * Data visualization (PowerBI, matplotlib, seaborn, ggplot)
   * Technical writing
 
-I have a PhD in Image processing, my main research area is continuous optimization techniques in signal and image processing.
+I have a PhD in Image processing, and my main research area is continuous optimization techniques in signal and image processing.
 
 My thesis is at the intersection of:
 
