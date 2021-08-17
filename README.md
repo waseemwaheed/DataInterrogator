@@ -3,7 +3,7 @@
 ![](https://github.com/waseemwaheed/DataInterrogator/workflows/CI/badge.svg) 
 ![](https://github.com/waseemwaheed/DataInterrogator/workflows/GH-Pages%20Status/badge.svg) 
 
-https://waseemwaheed.github.io/
+https://waseemwaheed.github.io/DataInterrogator
 
 # My Blog
 
