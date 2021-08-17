@@ -11,6 +11,6 @@ Few days ago, I was introduced to the Benford's law of distribution. Looking up 
 
 After few seconds of thinking about it, I decided to confirm this claim, So, I quickly pulled the data from wikipedia  and coded a quick and dirty experiment. And sure it works as you can see bellow
 
-![](/images/hist.jpg)
+![]({{site.baseurl}}/images/hist.jpg)
 
 Code and data can be found in my [GitHub](https://github.com/waswas15/random_experiments)
