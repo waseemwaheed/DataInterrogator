@@ -1,7 +1,15 @@
+---
+toc: true
+layout: post
+description: Quick analysis of the world population.
+categories: [Analysis, Porbability]
+title: Benford's Law
+---
+
 # Benford's law
 Few days ago, I was introduced to the Benford's law of distribution. Looking up the internet for accessible explanation, I came across a basic introduction with very interesting explanation on [Khan Academy](https://www.khanacademy.org/math/algebra2/exponential-and-logarithmic-functions/logarithmic-scale/v/vi-and-sal-talk-about-the-mysteries-of-benford-s-law). Sal mentioned the typical example of the world countries populations follow this fascinating distribution function.
 
-After few seconds thinking about it, I decided to confirm this claim, So, I quickly pulled the data from wikipedia  and coded a quick and dirty experiment. And sure it works as you can see bellow
+After few seconds of thinking about it, I decided to confirm this claim, So, I quickly pulled the data from wikipedia  and coded a quick and dirty experiment. And sure it works as you can see bellow
 
 ![](/images/hist.jpg)
 
