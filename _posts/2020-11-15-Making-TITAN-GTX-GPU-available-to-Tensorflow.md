@@ -1,5 +1,5 @@
 ---
-toc: true
+toc: false
 layout: post
 description: Installing Tensorflow with GPU support
 categories: [Python, Linux, Tensorflow, Software Engineering]
