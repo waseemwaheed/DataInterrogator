@@ -12,7 +12,7 @@ I have manged to encoded the data in color, size and in text in the form of tool
 
 
 
-![img](/images/d3js4.png)
+![img]({{site.baseurl}}/images/d3js4.png)
 
 
 
