@@ -2,10 +2,10 @@
   
     
         "post0": {
-            "title": "Benfords Law",
-            "content": "Benford’s law . Few days ago, I was introduced to the Benford’s law of distribution. Looking up the internet for accessible explanation, I came across a basic introduction with very interesting explanation on Khan Academy. Sal mentioned the typical example of the world countries populations follow this fascinating distribution function. . After few seconds thinking about it, I decided to confirm this claim, So, I quickly pulled the data from wikipedia and coded a quick and dirty experiment. And sure it works as you can see bellow . . Code and data can be found in my GitHub .",
-            "url": "https://waseemwaheed.github.io/DataInterrogator/2017/07/07/benfords-law.html",
-            "relUrl": "/2017/07/07/benfords-law.html",
+            "title": "Benford's Law",
+            "content": "Benford’s law . Few days ago, I was introduced to the Benford’s law of distribution. Looking up the internet for accessible explanation, I came across a basic introduction with very interesting explanation on Khan Academy. Sal mentioned the typical example of the world countries populations follow this fascinating distribution function. . After few seconds of thinking about it, I decided to confirm this claim, So, I quickly pulled the data from wikipedia and coded a quick and dirty experiment. And sure it works as you can see bellow . . Code and data can be found in my GitHub .",
+            "url": "https://waseemwaheed.github.io/DataInterrogator/analysis/porbability/2017/07/07/benfords-law.html",
+            "relUrl": "/analysis/porbability/2017/07/07/benfords-law.html",
             "date": " • Jul 7, 2017"
         }
         
