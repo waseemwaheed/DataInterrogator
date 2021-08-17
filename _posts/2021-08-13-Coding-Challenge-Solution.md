@@ -1,0 +1,93 @@
+---
+toc: true
+layout: post
+description: A coding challenge solution
+categories: [Python, Docker, Unit Testing, Software Engineering, Data Structures, JSON]
+title: A solution to a coding challenge
+---
+
+# Introduction 
+
+I have recently been invited to a coding challenge which was required to be delivered in 7 days. The task was very simple 😎: 
+
+
+
+> # Coding challenge
+>
+> The aim of this exercise is to implement an "alerting" service which will consume a file of currency conversion rates and
+> produce alerts.
+> 
+>For the purpose of this coding exercise, you are allowed to choose a different programming language,
+> provided that you provide us with a detailed instruction on how to build and run your program.
+> 
+> 
+>### Input
+>
+> The format of the file will simulate a stream of currency
+>conversion rates. Each line will be properly structured
+> JSON (http://jsonlines.org/):
+> 
+>  { "timestamp": 1554933784.023, "currencyPair": "CNYAUD", "rate": 0.39281 }
+>
+>    The fields in the JSON record are:
+>- timestamp: the timestamp of the record in seconds since UNIX epoch, 
+>   with fractional seconds specified
+> - currencyPair: the sell and buy currencies which the rate relates to
+> - rate: the conversion rate
+> 
+> You may assume that for each currency pair, currency conversion rates are streamed
+>at a constant rate of one per second. ie. for two consecutive "CNYAUD" entries in
+> in the input file, they will have timestamps that differ by one second:
+> 
+>     { "timestamp": 1554933784.023, "currencyPair": "CNYAUD", "rate": 0.39281 }
+>    { "timestamp": 1554933784.087, "currencyPair": "USDAUD", "rate": 0.85641 }
+>     { "timestamp": 1554933785.023, "currencyPair": "CNYAUD", "rate": 0.39295 }
+> 
+> ### Output
+>
+> The alerting service should produce the following alert as a JSON string output to
+>standard output:
+> 
+> - when the spot rate for a currency pair changes by more than 10% from the 5 minute average for that currency pair
+> 
+>The format of the alert produced should be:
+> 
+>    { "timestamp": 1554933784.023, "currencyPair": "CNYAUD", "alert": "spotChange" }
+> 
+
+As mentioned earlier, the task is very simple but I wanted to take the opportunity to improve the following aspects:
+
+* Code readability
+* Unit testing
+* Deployability
+
+## Code readability
+I use VSCODE for many tasks, and it is my main text editor so naturally, I looked for tools that play well with it. For automatic code style I used [**black**](https://github.com/psf/black) which is a great code formatter. Additionally, I revised the [PEP 8](https://www.python.org/dev/peps/pep-0008/) guide.
+
+## Unit Testing
+
+The idea of unit testing is that you have to arrange your code into de-coupled components to allow for testing.  In the Python ecosystem there are few options such as the [unittest](https://docs.python.org/3/library/unittest.html) which comes as part of Python and [pytest](https://docs.pytest.org/en/6.2.x/). I ended up using pytest to learn it.
+
+## Deployability 
+Python, similar to other interpreted languages require a compatible version of the interpreter and the same version of packages (excluding Javascript, where every computer nowadays comes with one). This is a common issue that has many solutions. Among these solutions are the virtual environments such as ([venv](https://docs.python.org/3/library/venv.html), [virtualenv](https://virtualenv.pypa.io/en/latest/), [conda env](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)) and containers such as the well-known [docker](https://www.docker.com/). The simplicity and ubiquity of docker made a simple choice for me in this challenge. Once the code is written and tested, docker image description file is all that is needed. 
+
+# My solution
+
+You can access the solution over [here](https://github.com/waseemwaheed/coding-challenge/tree/main/awcc).
+
+## Assumptions
+* One input file can be consumed at a time.
+* The frequency at which updates arrive is fixed (1s). Hence the average, in the general case, is taken over 300 samples.
+* A single stream (input file) can contain more than one currency pair.
+
+## Decisions
+* To keep track of the exchange rates for each pair, I made the currency pairs keys of a dictionary which maps to sliding window [deque](https://docs.python.org/3/library/collections.html#collections.deque) data structure.
+  * The rationale behind choosing a dictionary is because, each new line can be new data point for a currency pair, which means the currency pairs data need to be accessed in random order and a dictionary is the best options here where an access operation is $O(1)$
+  * The rationale behind choosing a deque is that it allows for the easy creation of a sliding window. A deque has $O(1)$ complexity when we append to or access the ends of the queue, which is what we are doing here.
+
+* The `CurrencyPairData` class is a subclass of the `Observable` class. This allows me to easily add callbacks to `CurrencyPairData` instances. 
+
+
+# In the end
+The coding challenge was a fun opportunity to build something and get someone to give me feedback on my approach. Additionally, I had a ton of fun learning about *pytest* and *docker* which will definitely be used in my other projects. 
+
