@@ -14,4 +14,4 @@ Anyway, I think the [visualization](https://github.com/waswas15/d3js-one-month-c
 
 
 
-![img](images/d3js2.png)
+![img](/images/d3js2.png)
