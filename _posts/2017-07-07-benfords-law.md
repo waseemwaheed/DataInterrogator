@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: Quick analysis of the world population.
-categories: [Analysis, Porbability]
+categories: [Analysis, Probability]
 title: Benford's Law
 ---
 
