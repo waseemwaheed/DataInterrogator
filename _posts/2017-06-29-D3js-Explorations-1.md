@@ -15,7 +15,7 @@ My data that I had which is the locations of temperature sensors spread across t
 
 
 
-![img](/images/d3js1.png)
+![img]({{site.baseurl}}/images/d3js1.png)
 
 
 
