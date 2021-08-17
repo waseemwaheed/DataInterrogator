@@ -10,7 +10,7 @@ title: Data Interrogator
 description: A personal blog about software engineering and data science
 github_username: waseemwaheed
 # you can comment the below line out if your repo name is not different than your baseurl
-github_repo: "waseemwaheed.github.io"
+# github_repo: "waseemwaheed.github.io"
 
 # OPTIONAL: override baseurl and url if using a custom domain
 # Note: leave out the trailing / from this value. 
