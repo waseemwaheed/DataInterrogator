@@ -62,18 +62,20 @@ As mentioned earlier, the task is very simple but I wanted to take the opportuni
 * Deployability
 
 ## Code readability
-I use VSCODE for many tasks, and it is my main text editor so naturally, I looked for tools that play well with it. For automatic code style I used [**black**](https://github.com/psf/black) which is a great code formatter. Additionally, I revised the [PEP 8](https://www.python.org/dev/peps/pep-0008/) guide.
+I use VSCODE for many tasks, and it is my main text editor so naturally, I looked for tools that play well with it. For automatic code styling, I used [*black*](https://github.com/psf/black) which is a great code formatter. Additionally, I revised the [PEP 8](https://www.python.org/dev/peps/pep-0008/) guide to refresh my memory of best practices.
 
 ## Unit Testing
 
-The idea of unit testing is that you have to arrange your code into de-coupled components to allow for testing.  In the Python ecosystem there are few options such as the [unittest](https://docs.python.org/3/library/unittest.html) which comes as part of Python and [pytest](https://docs.pytest.org/en/6.2.x/). I ended up using pytest to learn it.
+The idea behind unit testing is that you have to arrange your code into non-coupled components to allow for testing.  In the Python ecosystem there are few options such as the [unittest](https://docs.python.org/3/library/unittest.html) which comes as part of the [Python Standard Library](https://docs.python.org/3/library/) and [pytest](https://docs.pytest.org/en/6.2.x/). I ended up using pytest because I wanted to learn it.
 
 ## Deployability 
-Python, similar to other interpreted languages require a compatible version of the interpreter and the same version of packages (excluding Javascript, where every computer nowadays comes with one). This is a common issue that has many solutions. Among these solutions are the virtual environments such as ([venv](https://docs.python.org/3/library/venv.html), [virtualenv](https://virtualenv.pypa.io/en/latest/), [conda env](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)) and containers such as the well-known [docker](https://www.docker.com/). The simplicity and ubiquity of docker made a simple choice for me in this challenge. Once the code is written and tested, docker image description file is all that is needed. 
+Python, similar to other interpreted languages, requires a compatible version of the interpreter and the same version of packages (excluding Javascript, where every computer nowadays comes with one). This is a common issue that has many solutions. Among those solutions are the virtual environments such as ([venv](https://docs.python.org/3/library/venv.html), [virtualenv](https://virtualenv.pypa.io/en/latest/), [conda env](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)) and containers such as the well-known [docker](https://www.docker.com/). 
+
+The simplicity and ubiquity of docker made it a simple choice 👍 for me in this challenge. Once the code is written and tested, docker image description file is all that is needed. The alternative path of virtual environment was also a viable one, I just had to write enviroment creation scripts, one for windows and one for Unix/Linux 🥱. 
 
 # My solution
 
-You can access the solution over [here](https://github.com/waseemwaheed/coding-challenge/tree/main/awcc).
+You can access the solution over [here](https://github.com/waseemwaheed/coding-challenge/tree/main/awcc) .
 
 ## Assumptions
 * One input file can be consumed at a time.
