@@ -4,7 +4,7 @@ title: About Me
 permalink: /about/
 ---
 
-Hi this is me ![Waseem Waheed](/images/profile.png)
+Hi this is me ![Waseem Waheed]({{site.baseurl}}/images/profile.png)
 
 My main skills are:
   * Software engineering (Python, Java, C)
