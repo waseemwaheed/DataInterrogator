@@ -6,8 +6,8 @@
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 
-title: fastpages
-description: An easy to use blogging platform with support for Jupyter Notebooks.
+title: Data Interrogator
+description: A personal blog about software engineering and data science
 github_username: waseemwaheed
 # you can comment the below line out if your repo name is not different than your baseurl
 github_repo: "DataInterrogator"
@@ -39,11 +39,11 @@ baseurl: "/DataInterrogator" # the subpath of your site, e.g. "/blog".
 # Github and twitter are optional:
 minima:
   social_links:
-    twitter: fastdotai
-    github: fastai
+    twitter: WasWaheed
+    github: waseemwaheed
 
 # Set this to true to get LaTeX math equation support
-use_math: 
+use_math: true
 
 # Set this to true to display the summary of your blog post under your title on the Home page.
 show_description: true
@@ -58,7 +58,7 @@ annotations: false
 show_tags: true
 
 # Add your Google Analytics ID here if you have one and want to use it
-google_analytics: 
+google_analytics: G-07K947SQ3K
 
 exclude:
   - docker-compose.yml
