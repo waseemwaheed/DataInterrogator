@@ -1,5 +1,6 @@
 ---
-toc: true
+toc: false
+comments: true
 layout: post
 description: A coding challenge solution
 categories: [Python, Docker, Unit Testing, Software Engineering, Data Structures, JSON]
