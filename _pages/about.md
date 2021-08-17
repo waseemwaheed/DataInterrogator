@@ -4,7 +4,6 @@ title: About Me
 permalink: /about/
 ---
 
-# About
 Hi this is me ![Waseem Waheed](/images/profile.png)
 
 My main skills are:
