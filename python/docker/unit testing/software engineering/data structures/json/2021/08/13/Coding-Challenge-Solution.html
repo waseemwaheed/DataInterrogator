@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>A solution to a coding challenge | Data Interrogator</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="A solution to a coding challenge" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A coding challenge solution" />
+<meta property="og:description" content="A coding challenge solution" />
+<link rel="canonical" href="https://waseemwaheed.github.io/DataInterrogator/python/docker/unit%20testing/software%20engineering/data%20structures/json/2021/08/13/Coding-Challenge-Solution.html" />
+<meta property="og:url" content="https://waseemwaheed.github.io/DataInterrogator/python/docker/unit%20testing/software%20engineering/data%20structures/json/2021/08/13/Coding-Challenge-Solution.html" />
+<meta property="og:site_name" content="Data Interrogator" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-08-13T00:00:00-05:00" />
+<script type="application/ld+json">
+{"description":"A coding challenge solution","url":"https://waseemwaheed.github.io/DataInterrogator/python/docker/unit%20testing/software%20engineering/data%20structures/json/2021/08/13/Coding-Challenge-Solution.html","@type":"BlogPosting","headline":"A solution to a coding challenge","dateModified":"2021-08-13T00:00:00-05:00","datePublished":"2021-08-13T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://waseemwaheed.github.io/DataInterrogator/python/docker/unit%20testing/software%20engineering/data%20structures/json/2021/08/13/Coding-Challenge-Solution.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/DataInterrogator/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://waseemwaheed.github.io/DataInterrogator/feed.xml" title="Data Interrogator" /><!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-07K947SQ3K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-07K947SQ3K');
+</script>
+
+
+<link rel="shortcut icon" type="image/x-icon" href="/DataInterrogator/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css" integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js" integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js" integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha512-0doc9hKxR3PYwso42RD1p5ySZpzzuDiOwMrdCEh2WdJZCjcmFKc/wEnL+z8fBQrnHoiNWbo+3fiGkOYXBdQp4A==" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/DataInterrogator/">Data Interrogator</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/DataInterrogator/about/">About Me</a><a class="page-link" href="/DataInterrogator/search/">Search</a><a class="page-link" href="/DataInterrogator/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">A solution to a coding challenge</h1><p class="page-description">A coding challenge solution</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-08-13T00:00:00-05:00" itemprop="datePublished">
+        Aug 13, 2021
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      3 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/DataInterrogator/categories/#Python">Python</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/DataInterrogator/categories/#Docker">Docker</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/DataInterrogator/categories/#Unit Testing">Unit Testing</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/DataInterrogator/categories/#Software Engineering">Software Engineering</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/DataInterrogator/categories/#Data Structures">Data Structures</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/DataInterrogator/categories/#JSON">JSON</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#introduction">Introduction</a></li>
+<li class="toc-entry toc-h1"><a href="#coding-challenge">Coding challenge</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#input">Input</a></li>
+<li class="toc-entry toc-h3"><a href="#output">Output</a></li>
+<li class="toc-entry toc-h2"><a href="#code-readability">Code readability</a></li>
+<li class="toc-entry toc-h2"><a href="#unit-testing">Unit Testing</a></li>
+<li class="toc-entry toc-h2"><a href="#deployability">Deployability</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#my-solution">My solution</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#assumptions">Assumptions</a></li>
+<li class="toc-entry toc-h2"><a href="#decisions">Decisions</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#in-the-end">In the end</a></li>
+</ul><h1 id="introduction">
+<a class="anchor" href="#introduction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction</h1>
+
+<p>I have recently been invited to a coding challenge which was required to be delivered in 7 days. The task was very simple 😎:</p>
+
+<blockquote>
+  <h1 id="coding-challenge">
+<a class="anchor" href="#coding-challenge" aria-hidden="true"><span class="octicon octicon-link"></span></a>Coding challenge</h1>
+
+  <p>The aim of this exercise is to implement an “alerting” service which will consume a file of currency conversion rates and
+produce alerts.</p>
+
+  <p>For the purpose of this coding exercise, you are allowed to choose a different programming language,
+provided that you provide us with a detailed instruction on how to build and run your program.</p>
+
+  <h3 id="input">
+<a class="anchor" href="#input" aria-hidden="true"><span class="octicon octicon-link"></span></a>Input</h3>
+
+  <p>The format of the file will simulate a stream of currency
+conversion rates. Each line will be properly structured
+JSON (http://jsonlines.org/):</p>
+
+  <p>{ “timestamp”: 1554933784.023, “currencyPair”: “CNYAUD”, “rate”: 0.39281 }</p>
+
+  <p>The fields in the JSON record are:</p>
+  <ul>
+    <li>timestamp: the timestamp of the record in seconds since UNIX epoch, 
+with fractional seconds specified</li>
+    <li>currencyPair: the sell and buy currencies which the rate relates to</li>
+    <li>rate: the conversion rate</li>
+  </ul>
+
+  <p>You may assume that for each currency pair, currency conversion rates are streamed
+at a constant rate of one per second. ie. for two consecutive “CNYAUD” entries in
+in the input file, they will have timestamps that differ by one second:</p>
+
+  <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>{ "timestamp": 1554933784.023, "currencyPair": "CNYAUD", "rate": 0.39281 }    { "timestamp": 1554933784.087, "currencyPair": "USDAUD", "rate": 0.85641 }
+{ "timestamp": 1554933785.023, "currencyPair": "CNYAUD", "rate": 0.39295 }
+</code></pre></div>  </div>
+
+  <h3 id="output">
+<a class="anchor" href="#output" aria-hidden="true"><span class="octicon octicon-link"></span></a>Output</h3>
+
+  <p>The alerting service should produce the following alert as a JSON string output to
+standard output:</p>
+
+  <ul>
+    <li>when the spot rate for a currency pair changes by more than 10% from the 5 minute average for that currency pair</li>
+  </ul>
+
+  <p>The format of the alert produced should be:</p>
+
+  <p>{ “timestamp”: 1554933784.023, “currencyPair”: “CNYAUD”, “alert”: “spotChange” }</p>
+
+</blockquote>
+
+<p>As mentioned earlier, the task is very simple but I wanted to take the opportunity to improve the following aspects:</p>
+
+<ul>
+  <li>Code readability</li>
+  <li>Unit testing</li>
+  <li>Deployability</li>
+</ul>
+
+<h2 id="code-readability">
+<a class="anchor" href="#code-readability" aria-hidden="true"><span class="octicon octicon-link"></span></a>Code readability</h2>
+<p>I use VSCODE for many tasks, and it is my main text editor so naturally, I looked for tools that play well with it. For automatic code style I used <a href="https://github.com/psf/black"><strong>black</strong></a> which is a great code formatter. Additionally, I revised the <a href="https://www.python.org/dev/peps/pep-0008/">PEP 8</a> guide.</p>
+
+<h2 id="unit-testing">
+<a class="anchor" href="#unit-testing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Unit Testing</h2>
+
+<p>The idea of unit testing is that you have to arrange your code into de-coupled components to allow for testing.  In the Python ecosystem there are few options such as the <a href="https://docs.python.org/3/library/unittest.html">unittest</a> which comes as part of Python and <a href="https://docs.pytest.org/en/6.2.x/">pytest</a>. I ended up using pytest to learn it.</p>
+
+<h2 id="deployability">
+<a class="anchor" href="#deployability" aria-hidden="true"><span class="octicon octicon-link"></span></a>Deployability</h2>
+<p>Python, similar to other interpreted languages require a compatible version of the interpreter and the same version of packages (excluding Javascript, where every computer nowadays comes with one). This is a common issue that has many solutions. Among these solutions are the virtual environments such as (<a href="https://docs.python.org/3/library/venv.html">venv</a>, <a href="https://virtualenv.pypa.io/en/latest/">virtualenv</a>, <a href="https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html">conda env</a>) and containers such as the well-known <a href="https://www.docker.com/">docker</a>. The simplicity and ubiquity of docker made a simple choice for me in this challenge. Once the code is written and tested, docker image description file is all that is needed.</p>
+
+<h1 id="my-solution">
+<a class="anchor" href="#my-solution" aria-hidden="true"><span class="octicon octicon-link"></span></a>My solution</h1>
+
+<p>You can access the solution over <a href="https://github.com/waseemwaheed/coding-challenge/tree/main/awcc">here</a>.</p>
+
+<h2 id="assumptions">
+<a class="anchor" href="#assumptions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Assumptions</h2>
+<ul>
+  <li>One input file can be consumed at a time.</li>
+  <li>The frequency at which updates arrive is fixed (1s). Hence the average, in the general case, is taken over 300 samples.</li>
+  <li>A single stream (input file) can contain more than one currency pair.</li>
+</ul>
+
+<h2 id="decisions">
+<a class="anchor" href="#decisions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Decisions</h2>
+<ul>
+  <li>To keep track of the exchange rates for each pair, I made the currency pairs keys of a dictionary which maps to sliding window <a href="https://docs.python.org/3/library/collections.html#collections.deque">deque</a> data structure.
+    <ul>
+      <li>The rationale behind choosing a dictionary is because, each new line can be new data point for a currency pair, which means the currency pairs data need to be accessed in random order and a dictionary is the best options here where an access operation is $O(1)$</li>
+      <li>The rationale behind choosing a deque is that it allows for the easy creation of a sliding window. A deque has $O(1)$ complexity when we append to or access the ends of the queue, which is what we are doing here.</li>
+    </ul>
+  </li>
+  <li>The <code class="language-plaintext highlighter-rouge">CurrencyPairData</code> class is a subclass of the <code class="language-plaintext highlighter-rouge">Observable</code> class. This allows me to easily add callbacks to <code class="language-plaintext highlighter-rouge">CurrencyPairData</code> instances.</li>
+</ul>
+
+<h1 id="in-the-end">
+<a class="anchor" href="#in-the-end" aria-hidden="true"><span class="octicon octicon-link"></span></a>In the end</h1>
+<p>The coding challenge was a fun opportunity to build something and get someone to give me feedback on my approach. Additionally, I had a ton of fun learning about <em>pytest</em> and <em>docker</em> which will definitely be used in my other projects.</p>
+
+
+  </div><a class="u-url" href="/DataInterrogator/python/docker/unit%20testing/software%20engineering/data%20structures/json/2021/08/13/Coding-Challenge-Solution.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/DataInterrogator/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/DataInterrogator/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/DataInterrogator/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>A personal blog about software engineering and data science</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/waseemwaheed" title="waseemwaheed"><svg class="svg-icon grey"><use xlink:href="/DataInterrogator/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/WasWaheed" title="WasWaheed"><svg class="svg-icon grey"><use xlink:href="/DataInterrogator/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
