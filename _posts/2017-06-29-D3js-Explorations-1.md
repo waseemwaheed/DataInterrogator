@@ -3,7 +3,7 @@ toc: true
 layout: post
 description: An example about using D3.js for visualization
 categories: [D3, Visualization]
-title: D3 : D3 - Visualizing temperature 1
+title: D3 - Visualizing temperature 1
 ---
 
 This is the first day of the challenge but I have been tinkering with D3 for few days now.
