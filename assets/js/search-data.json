@@ -2,17 +2,6 @@
   
     
         "post0": {
-            "title": "An Example Markdown Post",
-            "content": "Example Markdown Post . Basic setup . Jekyll requires blog post files to be named according to the following format: . YEAR-MONTH-DAY-filename.md . Where YEAR is a four-digit number, MONTH and DAY are both two-digit numbers, and filename is whatever file name you choose, to remind yourself what this post is about. .md is the file extension for markdown files. . The first line of the file should start with a single hash character, then a space, then your title. This is how you create a “level 1 heading” in markdown. Then you can create level 2, 3, etc headings as you wish but repeating the hash character, such as you see in the line ## File names above. . Basic formatting . You can use italics, bold, code font text, and create links. Here’s a footnote 1. Here’s a horizontal rule: . . Lists . Here’s a list: . item 1 | item 2 | . And a numbered list: . item 1 | item 2 | Boxes and stuff . This is a quotation . . You can include alert boxes …and… . . You can include info boxes Images . . Code . You can format text and code per usual . General preformatted text: . # Do a thing do_thing() . Python code and output: . # Prints &#39;2&#39; print(1+1) . 2 . Formatting text as shell commands: . echo &quot;hello world&quot; ./some_script.sh --option &quot;value&quot; wget https://example.com/cat_photo1.png . Formatting text as YAML: . key: value - another_key: &quot;another value&quot; . Tables . Column 1 Column 2 . A thing | Another thing | . Tweetcards . Altair 4.0 is released! https://t.co/PCyrIOTcvvTry it with: pip install -U altairThe full list of changes is at https://t.co/roXmzcsT58 ...read on for some highlights. pic.twitter.com/vWJ0ZveKbZ . &mdash; Jake VanderPlas (@jakevdp) December 11, 2019 Footnotes . This is the footnote. &#8617; . |",
-            "url": "https://waseemwaheed.github.io/DataInterrogator/markdown/2020/01/14/test-markdown-post.html",
-            "relUrl": "/markdown/2020/01/14/test-markdown-post.html",
-            "date": " • Jan 14, 2020"
-        }
-        
-    
-  
-    
-        ,"post1": {
             "title": "Benfords Law",
             "content": "Benford’s law . Few days ago, I was introduced to the Benford’s law of distribution. Looking up the internet for accessible explanation, I came across a basic introduction with very interesting explanation on Khan Academy. Sal mentioned the typical example of the world countries populations follow this fascinating distribution function. . After few seconds thinking about it, I decided to confirm this claim, So, I quickly pulled the data from wikipedia and coded a quick and dirty experiment. And sure it works as you can see bellow . . Code and data can be found in my GitHub .",
             "url": "https://waseemwaheed.github.io/DataInterrogator/2017/07/07/benfords-law.html",
@@ -23,7 +12,7 @@
     
   
     
-        ,"post2": {
+        ,"post1": {
             "title": "D3js Explorations 4",
             "content": "Today’s post is a bit delayed, anyway, I went through the same data from day 1 (temperature measurements) but this time I, used leaflet.js instead of google maps API starting from from the example. The beautiful thing about leaflet is that it doesn’t abstract the whole DOM event-handling like in google maps which means events set using d3 are handled normally. . I have manged to encoded the data in color, size and in text in the form of tool-tips. . . The code can be found at here .",
             "url": "https://waseemwaheed.github.io/DataInterrogator/2017/07/03/D3js-Explorations-4.html",
@@ -34,7 +23,7 @@
     
   
     
-        ,"post3": {
+        ,"post2": {
             "title": "D3js Explorations 3",
             "content": "Today work is my own go at arc diagrams replicating a worked example at Matthew Clemens’s blog post. My code can be found at Github . .",
             "url": "https://waseemwaheed.github.io/DataInterrogator/2017/07/01/D3js-Explorations-3.html",
@@ -45,7 +34,7 @@
     
   
     
-        ,"post4": {
+        ,"post3": {
             "title": "D3js Explorations 2",
             "content": "I started today with a goal to plot data from Melbourne city particularly Melbourne Bike Share stations on google maps with marker size and color representing the size of the station and the availability of bikes respectively in addition to tooltips containing the details of each station on hover. . Mapping the data went smoothly but tooltips turned to be tricky, it took me some time to decide to postpone it to another stage. I think the problem has to do with google maps handling events not D3 so in other words events are not being passed to D3. Handling events with google maps is straight forward but finding the current location of the markers to compare with the current mouse position is not clear at this point. . Anyway, I think the visualization is still interesting. . .",
             "url": "https://waseemwaheed.github.io/DataInterrogator/2017/06/30/d3js-Explorations-2.html",
@@ -56,7 +45,7 @@
     
   
     
-        ,"post5": {
+        ,"post4": {
             "title": "D3js Explorations 1",
             "content": "This is the first day of the challenge but I have been tinkering with D3 for few days now. . My first day started with an intention to project points on a map so, I had a look at few examples by they seemed complicated so I adjusted my aims from drawing the map with d3 to mapping the data with d3 and get the map from a map provider (google maps or leaflet). I started with an example by Mike Bostock which is very accessible and I adapted it. My data that I had which is the locations of temperature sensors spread across the US (source : GSOD) as well as summary temperature measurement for one day. I’m happy with the result for today as I managed to project the sensors on the map and color coded the points based on temperature measurement. . My adapted version of the code can be found on my github . . Future directions : . Draw connections between nodes | include a slider to select the day of the year. |",
             "url": "https://waseemwaheed.github.io/DataInterrogator/2017/06/29/D3js-Explorations-1.html",
