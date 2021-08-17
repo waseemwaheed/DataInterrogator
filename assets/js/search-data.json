@@ -24,10 +24,10 @@
   
     
         ,"post2": {
-            "title": "D3js Explorations 3",
+            "title": "D3 - visualizing connections",
             "content": "Today work is my own go at arc diagrams replicating a worked example at Matthew Clemens’s blog post. My code can be found at Github . .",
-            "url": "https://waseemwaheed.github.io/DataInterrogator/2017/07/01/D3js-Explorations-3.html",
-            "relUrl": "/2017/07/01/D3js-Explorations-3.html",
+            "url": "https://waseemwaheed.github.io/DataInterrogator/d3/visualization/2017/07/01/D3js-Explorations-3.html",
+            "relUrl": "/d3/visualization/2017/07/01/D3js-Explorations-3.html",
             "date": " • Jul 1, 2017"
         }
         
