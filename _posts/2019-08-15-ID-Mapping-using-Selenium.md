@@ -13,13 +13,13 @@ At work, we have to keep track of the progress of students where each student is
 
 Instead of a single ID, students have two! 
 
-You may say, that should be fine, you must have a database mapping those IDs to each other isn't it? and the answer is yes but, there is a BUT, I can access one student at a time through an online portal. 
+You may say, that should be fine, you must have a database mapping those IDs to each other isn't it? and the answer is yes but, there is a BUT, I can access one student at a time through an online portal, which is kinda fun, you know 🙄. 
 
 # The solution
 
 But, then you may say, hang on, the DBA should be able to provide you with the data you need, isn't it. To you I say, I wish that was the case, anyways.
 
-To me this is the sort of thing that I like to spend my free time on 😎, so I spent an hour or so, figuring how to do it 🐱‍💻. I knew that there is a nice web browser automation tool called [Selenium](https://www.selenium.dev/), but I had never used till that point. 
+To me this is the sort of thing that I like to spend my free time on 😎, so I spent an hour or so, figuring how to do it 🐱‍💻. I knew that there is a nice web browser automation tool called [Selenium](https://www.selenium.dev/), but I had never used at that point. 
 
 With a bit of [Pandas](https://pandas.pydata.org/), I was able to get job done and I am very happy with the result, the script is accessible [here](https://github.com/waseemwaheed/coding-challenge/tree/main/id_mapper).
 
