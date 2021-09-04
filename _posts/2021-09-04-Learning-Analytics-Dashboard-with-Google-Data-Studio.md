@@ -1,3 +1,11 @@
+---
+toc: true
+layout: post
+description: Learning Analytics - Dashboard with Google Data Studio
+categories: [Dashboard, Analytics]
+title:  Learning Analytics - Dashboard with Google Data Studio
+---
+
 # Learning Analytics
 
 COVID-19 has had significant impact on our lives as a whole. Most industries have suffered from un expected shift in customers demand. 
