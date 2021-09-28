@@ -207,9 +207,11 @@ standard output:</p>
 <p>The idea behind unit testing is that you have to arrange your code into non-coupled components to allow for testing.  In the Python ecosystem there are few options such as the <a href="https://docs.python.org/3/library/unittest.html">unittest</a> which comes as part of the <a href="https://docs.python.org/3/library/">Python Standard Library</a> and <a href="https://docs.pytest.org/en/6.2.x/">pytest</a>. I ended up using pytest because I wanted to learn it.</p>
 
 <h2 id="deployability">Deployability</h2>
-<p>Python, similar to other interpreted languages, requires a compatible version of the interpreter and the same version of packages (excluding Javascript, where every computer nowadays comes with one). This is a common issue that has many solutions. Among those solutions are the virtual environments such as (<a href="https://docs.python.org/3/library/venv.html">venv</a>, <a href="https://virtualenv.pypa.io/en/latest/">virtualenv</a>, <a href="https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html">conda env</a>) and containers such as the well-known <a href="https://www.docker.com/">docker</a>.</p>
+<p>Python, similar to other interpreted languages, requires a compatible version of the interpreter and the same version of packages (excluding Javascript, where every computer nowadays comes with one). This is a common issue that has many solutions. Among those solutions are the virtual</p>
 
-<p>The simplicity and ubiquity of docker made it a simple choice 👍 for me in this challenge. Once the code is written and tested, docker image description file is all that is needed. The alternative path of virtual environment was also a viable one, I just had to write enviroment creation scripts, one for windows and one for Unix/Linux 🥱.</p>
+<p>nments such as (<a href="https://docs.python.org/3/library/venv.html">venv</a>, <a href="https://virtualenv.pypa.io/en/latest/">virtualenv</a>, <a href="https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html">conda env</a>) and containers such as the well-known <a href="https://www.docker.com/">docker</a>.</p>
+
+<p>The simplicity and ubiquity of docker made it a simple choice 👍 for me in this challenge. Once the code is written and tested, docker image description file is all that is needed. The alternative path of virtual environment was also a viable one, I just had to write environment creation scripts, one for windows and one for Unix/Linux 🥱.</p>
 
 <h1 id="my-solution">My solution</h1>
 
