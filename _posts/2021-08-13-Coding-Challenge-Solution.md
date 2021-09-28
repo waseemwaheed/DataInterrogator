@@ -70,9 +70,11 @@ I use VSCODE for many tasks, and it is my main text editor so naturally, I looke
 The idea behind unit testing is that you have to arrange your code into non-coupled components to allow for testing.  In the Python ecosystem there are few options such as the [unittest](https://docs.python.org/3/library/unittest.html) which comes as part of the [Python Standard Library](https://docs.python.org/3/library/) and [pytest](https://docs.pytest.org/en/6.2.x/). I ended up using pytest because I wanted to learn it.
 
 ## Deployability 
-Python, similar to other interpreted languages, requires a compatible version of the interpreter and the same version of packages (excluding Javascript, where every computer nowadays comes with one). This is a common issue that has many solutions. Among those solutions are the virtual environments such as ([venv](https://docs.python.org/3/library/venv.html), [virtualenv](https://virtualenv.pypa.io/en/latest/), [conda env](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)) and containers such as the well-known [docker](https://www.docker.com/). 
+Python, similar to other interpreted languages, requires a compatible version of the interpreter and the same version of packages (excluding Javascript, where every computer nowadays comes with one). This is a common issue that has many solutions. Among those solutions are the virtual 
 
-The simplicity and ubiquity of docker made it a simple choice 👍 for me in this challenge. Once the code is written and tested, docker image description file is all that is needed. The alternative path of virtual environment was also a viable one, I just had to write enviroment creation scripts, one for windows and one for Unix/Linux 🥱. 
+nments such as ([venv](https://docs.python.org/3/library/venv.html), [virtualenv](https://virtualenv.pypa.io/en/latest/), [conda env](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)) and containers such as the well-known [docker](https://www.docker.com/). 
+
+The simplicity and ubiquity of docker made it a simple choice 👍 for me in this challenge. Once the code is written and tested, docker image description file is all that is needed. The alternative path of virtual environment was also a viable one, I just had to write environment creation scripts, one for windows and one for Unix/Linux 🥱. 
 
 # My solution
 
